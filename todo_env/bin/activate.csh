@@ -1,5 +1,6 @@
 # This file must be used with "source bin/activate.csh" *from csh*.
 # You cannot run it directly.
+
 # Created by Davide Di Blasi <davidedb@gmail.com>.
 # Ported to Python 3.3 venv by Andrew Svetlov <andrew.svetlov@gmail.com>
 
@@ -8,17 +9,17 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV /home/mikedrums35/my_projects/flask_project/todo_env
+setenv VIRTUAL_ENV /Users/michaelfigueiredo/todo_app/todo_env
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/"bin":$PATH"
+setenv VIRTUAL_ENV_PROMPT todo_env
 
 
 set _OLD_VIRTUAL_PROMPT="$prompt"
 
 if (! "$?VIRTUAL_ENV_DISABLE_PROMPT") then
-    set prompt = '(todo_env) '"$prompt"
-    setenv VIRTUAL_ENV_PROMPT '(todo_env) '
+    set prompt = "("todo_env") $prompt:q"
 endif
 
 alias pydoc python -m pydoc
